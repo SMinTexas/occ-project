@@ -1,0 +1,66 @@
+@media all and (min-width: 480px) {
+    .logon {
+        padding: 60px 0;
+    }
+}
+
+.logon form {
+    margin: 0 auto;
+    max-width: 320px;
+}
+
+.logon {
+    font-family: "Fondamento";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.logon-header {
+    background-color: white;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.form-label-first {
+    font-size: 20px;
+    padding-right: 6px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.form-label-second {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.form-control {
+    background-color: #F3F3F3;
+    width: 225px;
+    margin-bottom: 5px;
+    height: 20px;
+}
+
+.button-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 320px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.register-message {
+    font-size: 20px;
+    text-align: center;
+}
