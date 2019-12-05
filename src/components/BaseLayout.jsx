@@ -7,9 +7,23 @@ import OCC from "../occ.jpeg";
 import Status from "./Status";
 
 class Menu extends Component {
+    cleanStorage() {
+        localStorage.removeItem("username");
+        localStorage.removeItem("hygiene");
+        localStorage.removeItem("boyclothing");
+        localStorage.removeItem("girlclothing");
+        localStorage.removeItem("shoes");
+        localStorage.removeItem("boytoys");
+        localStorage.removeItem("girltoys");
+        localStorage.removeItem("paper");
+        localStorage.removeItem("writing");
+        localStorage.removeItem("craft");
+    }
+
     handleLogoutClick = () => {
-        this.props.logout()
-        this.props.history.push("/")
+        this.cleanStorage();
+        this.props.logout();
+        this.props.history.push("/");
     }
 
     render() {
@@ -20,8 +34,9 @@ class Menu extends Component {
                     <h3>Rhonda's Operation Christmas Child</h3>
                     <li className="Text"><NavLink to="/">Home</NavLink></li>
                     <li className="Text"><NavLink to="/logon">Logon</NavLink></li>
+                    <li><button onClick={this.handleLogoutClick}>Logout</button></li>
                     {/* <li className="Text"><NavLink to="/logoff">Logoff</NavLink></li> */}
-                    {this.props.isAuthenticated ? <li><button onClick={this.handleLogoutClick}>Logout</button></li>: null }
+                    {/* {this.props.isAuthenticated ? <li><button onClick={this.handleLogoutClick}>Logout</button></li>: null } */}
                 </ul>
                 <Status />
             </>

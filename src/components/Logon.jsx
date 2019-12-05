@@ -11,11 +11,30 @@ export default function Logon(props) {
         return username.length > 0 && password.length > 0;
     }
 
+    function setStorage() {
+        if (localStorage.registered === "true") {
+            localStorage.setItem("username", username);
+            localStorage.setItem("hygiene", "362");
+            localStorage.setItem("boyclothing", "56");
+            localStorage.setItem("girlclothing", "126");
+            localStorage.setItem("shoes", "26");
+            localStorage.setItem("boytoys", "59");
+            localStorage.setItem("girltoys", "23");
+            localStorage.setItem("paper", "695");
+            localStorage.setItem("writing", "2,593");
+            localStorage.setItem("craft", "1,540");
+        }
+    }
     function handleSubmit(e) {
         e.preventDefault();
-        localStorage.setItem("username",username);
-        setAuthenticationHeader(username);
-        props.history.push("/dashboard");
+        if (localStorage.registered !== undefined || null) {
+            setStorage();
+            setAuthenticationHeader(username);
+            props.history.push("/dashboard");
+        } else {
+            props.history.push("/register");
+        }
+
     }
 
     return (
@@ -70,94 +89,3 @@ export default function Logon(props) {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-// import React, { Component } from "react";
-// import { connect } from "react-redux";
-// import axios from "axios";
-// import { setAuthenticationHeader } from "../utils/authenticate";
-// import { withRouter } from "react-router";
-// import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-
-// class Logon extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.onLogout = this.handleLogonClick.bind(this);
-//         this.state = {
-//             email: "",
-//             password: ""
-//         }
-//     }
-
-//     handleTextBoxChange = (e) => {
-//         this.setState({
-//             [e.target.name]: e.target.value
-//         })
-//     }
-
-//     handleLogonClick = () => {
-//         axios.post("http://localhost:3000/logon",{
-//             email: this.state.email,
-//             password: this.state.password
-//         }).then(response => {
-//             let token = response.data.token 
-//             localStorage.setItem("webtoken", token)
-//             this.props.onAuthenticated(token)
-//             setAuthenticationHeader(token)
-//             this.props.history.push("/dashboard")
-//         }).catch(error => console.log(error))
-//     }
-
-//     render() {
-//         return (
-//             <div className="logon">
-//                 {/* <form onSubmit={this.handleLogonClick}>
-//                     <FormGroup controlId="email" bsSize="large">
-//                         <ControlLabel>E-Mail</ControlLabel>
-//                         <FormControl
-//                             autoFocus
-//                             type="email"
-//                             value={email}
-//                             onChange={this.handleTextBoxChange}
-//                         />
-//                     </FormGroup>
-//                     <FormGroup controlId="password" bsSize="large">
-//                         <ControlLabel>Password</ControlLabel>
-//                         <FormControl
-//                             value={password}
-//                             onChange={this.handleTextBoxChange}
-//                         />
-//                     </FormGroup>
-//                     <Button block bsSize="large" type="submit">Logon</Button>
-//                 </form> */}
-//                 <input 
-//                     name="email" 
-//                     onChange={this.handleTextBoxChange} 
-//                     placeholder="E-Mail">
-//                 </input>
-//                 <input 
-//                     name="password" 
-//                     type="password" 
-//                     onChange={this.handleTextBoxChange} 
-//                     placeholder="Password">
-//                 </input>
-//                 <button onClick={this.handleLogonClick}>Logon</button>
-//             </div>
-//         )
-//     }
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         onAuthenticated: (token) => dispatch({type: "ON_AUTHENTICATED", token: token})
-//     }
-// }
-
-// export default connect(null, mapDispatchToProps)(withRouter(Logon))
