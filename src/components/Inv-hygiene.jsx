@@ -15,6 +15,10 @@ class HygieneInventory extends Component {
         };
     }
 
+    handleDashboardClick = () => {
+        this.props.history.push("/dashboard");
+    }
+
     render() {
         return (
             <>
@@ -73,6 +77,8 @@ class HygieneInventory extends Component {
                             </tr>
                             </tfoot>
                         </table>
+                        <br />
+                        <button onClick={this.handleDashboardClick}>Back to Dashboard</button>
                     </div>
                 </div>
   

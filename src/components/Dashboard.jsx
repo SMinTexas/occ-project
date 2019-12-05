@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-//import "../App.css";
 import "./BaseLayout.css";
-import HygieneInventory from "./Inv-hygiene";
 import toothbrush from "../../src/toothbrush.jpeg";
 import boy from "../../src/boy.jpeg";
 import girl from "../../src/girl.jpeg";
