@@ -39,12 +39,12 @@ class Dashboard extends Component {
                   <img className="cell-image" src={toothbrush} alt="hygiene"></img>
                   <p>Total Inventory: {localStorage.hygiene}</p>
                 </div>
-                <div className="cell-dashboard">Clothing - Boys
+                <div className="cell-dashboard"><NavLink to="/boyclothes">Clothing - Boys</NavLink>
                   <hr />
                   <img className="cell-image" src={boy} alt="boy-clothing"></img>
                   <p>Total Inventory: {localStorage.boyclothing}</p>
                 </div>
-                <div className="cell-dashboard">Clothing - Girls
+                <div className="cell-dashboard"><NavLink to="/girlclothes">Clothing - Girls</NavLink>
                   <hr />
                   <img className="cell-image" src={girl} alt="girl-clothing"></img>  
                   <p>Total Inventory: {localStorage.girlclothing}</p>

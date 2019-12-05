@@ -3,15 +3,18 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import "./Inventory.css";
 
-class HygieneInventory extends Component {
+class GirlClothingInventory extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            brushes: 89,
-            combs: 76,
-            toothbrushes: 123,
-            girlstuff: 12,
-            washcloths: 83
+            girl_shirts: 21,
+            girl_pants: 3,
+            girl_shorts: 9,
+            girl_socks: 17,
+            girl_underwear: 24,
+            girl_hats: 14,
+            girl_gloves: 16,
+            girl_scarves: 22
         };
     }
 
@@ -28,7 +31,7 @@ class HygieneInventory extends Component {
                             <thead>
                                 <tr>
                                     <th className="inv-caption" colspan="2">
-                                        Hygiene Inventory
+                                        Girl Clothing Inventory
                                     </th>
                                 </tr>
                                 <tr>
@@ -38,33 +41,51 @@ class HygieneInventory extends Component {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th className="inv-item">Brushes</th>
+                                    <th className="inv-item">Shirts</th>
                                     <th className="inv-cnt">
-                                        {this.state.brushes}
+                                        {this.state.girl_shirts}
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th className="inv-item">Combs</th>
+                                    <th className="inv-item">Pants</th>
                                     <th className="inv-cnt">
-                                        {this.state.combs}
+                                        {this.state.girl_pants}
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th className="inv-item">Toothbrushes</th>
+                                    <th className="inv-item">Shorts</th>
                                     <th className="inv-cnt">
-                                        {this.state.toothbrushes}
+                                        {this.state.girl_shorts}
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th className="inv-item">Wash Cloths</th>
+                                    <th className="inv-item">Socks</th>
                                     <th className="inv-cnt">
-                                        {this.state.washcloths}
+                                        {this.state.girl_socks}
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th className="inv-item">Girl Stuff</th>
+                                    <th className="inv-item">Underwear</th>
                                     <th className="inv-cnt">
-                                        {this.state.girlstuff}
+                                        {this.state.girl_underwear}
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th className="inv-item">Hats</th>
+                                    <th className="inv-cnt">
+                                        {this.state.girl_hats}
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th className="inv-item">Gloves</th>
+                                    <th className="inv-cnt">
+                                        {this.state.girl_gloves}
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th className="inv-item">Scarves</th>
+                                    <th className="inv-cnt">
+                                        {this.state.girl_scarves}
                                     </th>
                                 </tr>
                             </tbody>
@@ -72,7 +93,7 @@ class HygieneInventory extends Component {
                             <tr>
                                 <th className="inv-footing-left">Total</th>
                                 <th className="inv-footing-right">
-                                    {localStorage.hygiene}
+                                    {localStorage.girlclothing}
                                 </th>
                             </tr>
                             </tfoot>
@@ -89,14 +110,15 @@ class HygieneInventory extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        brushes: state.brushes,
-        combs: state.combs,
-        toothbrushes: state.toothbrushes,
-        girlstuff: state.girlstuff,
-        washcloths: state.washcloths
+        boy_shirts: state.girl_shirts,
+        boy_pants: state.girl_pants,
+        boy_shorts: state.girl_shorts,
+        boy_socks: state.girl_socks,
+        boy_underwear: state.girl_underwear,
+        boy_hats: state.girl_hats,
+        boy_gloves: state.girl_gloves,
+        boy_scarves: state.girl_scarves
     }
 }
 
-export default connect(mapStateToProps)(withRouter(HygieneInventory))
-
-
+export default connect(mapStateToProps)(withRouter(GirlClothingInventory))
