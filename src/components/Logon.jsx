@@ -14,7 +14,7 @@ export default function Logon(props) {
     function setStorage() {
         if (localStorage.registered === "true") {
             localStorage.setItem("username", username);
-            localStorage.setItem("hygiene", "362");
+            localStorage.setItem("hygiene", 383);
             localStorage.setItem("boyclothing", "56");
             localStorage.setItem("girlclothing", "126");
             localStorage.setItem("shoes", "26");

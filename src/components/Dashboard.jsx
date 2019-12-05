@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
 //import "../App.css";
 import "./BaseLayout.css";
+import HygieneInventory from "./Inv-hygiene";
 import toothbrush from "../../src/toothbrush.jpeg";
 import boy from "../../src/boy.jpeg";
 import girl from "../../src/girl.jpeg";
@@ -34,7 +36,7 @@ class Dashboard extends Component {
             <div className="dashboard">
             <header className="dashboard-header">
               <div className="grid-dashboard">
-                <div className="cell-dashboard">Hygiene
+                <div className="cell-dashboard"><NavLink to="/hygiene">Hygiene</NavLink>
                   <hr />
                   <img className="cell-image" src={toothbrush} alt="hygiene"></img>
                   <p>Total Inventory: {localStorage.hygiene}</p>

@@ -1,0 +1,75 @@
+@media all and (min-width: 480px) {
+    .inventory {
+        padding: 60px 0;
+    }
+}
+
+.inventory {
+    font-family: "Fondamento";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.inventory-header {
+    background-color: white;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.inv-caption {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.inv-heading-left {
+    font-size: 20px;
+    padding: 5px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.inv-heading-right {
+    font-size: 20px;
+    padding: 5px;
+    text-align: right;
+    border: 1px solid black;
+}
+
+.inv-item {
+    font-size: 18px;
+    padding: 3px;
+    text-align: left;
+    border: 1px solid black;
+    color: blue;
+}
+
+.inv-cnt {
+    font-size: 18px;
+    padding: 3px;
+    text-align: right;
+    border: 1px solid black;
+    color: green;
+}
+
+.inv-footing-left {
+    font-size: 20px;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.inv-footing-right {
+    font-size: 20px;
+    text-align: right;
+    padding: 5px;
+    border: 1px solid black;
+}

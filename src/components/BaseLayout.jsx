@@ -35,8 +35,6 @@ class Menu extends Component {
                     <li className="Text"><NavLink to="/">Home</NavLink></li>
                     <li className="Text"><NavLink to="/logon">Logon</NavLink></li>
                     <li><button onClick={this.handleLogoutClick}>Logout</button></li>
-                    {/* <li className="Text"><NavLink to="/logoff">Logoff</NavLink></li> */}
-                    {/* {this.props.isAuthenticated ? <li><button onClick={this.handleLogoutClick}>Logout</button></li>: null } */}
                 </ul>
                 <Status />
             </>
