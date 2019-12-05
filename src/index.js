@@ -10,6 +10,7 @@ import reducer from "./store/reducer";
 import BaseLayout from "./components/BaseLayout";
 import Logon from "./components/Logon";
 import Dashboard from "./components/Dashboard";
+import Register from "./components/Register";
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
@@ -29,6 +30,7 @@ ReactDOM.render(
                     <Route path = "/" exact component = { App } />  
                     <Route path = "/logon" component = { Logon } /> 
                     <Route path = "/dashboard" component = { Dashboard } /> 
+                    <Route path = "/register" component = { Register } />
                 </Switch>  
             </BaseLayout>  
         </div>  
