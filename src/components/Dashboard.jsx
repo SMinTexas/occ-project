@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "./BaseLayout.css";
-import toothbrush from "../../src/toothbrush.jpeg";
-import boy from "../../src/boy.jpeg";
-import girl from "../../src/girl.jpeg";
-import shoes from "../../src/shoes.jpeg";
-import boytoys from "../../src/boytoy.jpeg";
-import girltoys from "../../src/girltoys.jpeg";
-import paper from "../../src/paper.jpeg";
-import pens from "../../src/pens.jpeg";
-import scissors from "../../src/scissors.jpeg";
+import toothbrush from "../pictures/toothbrush.jpeg";
+import boy from "../pictures/boy.jpeg";
+import girl from "../pictures/girl.jpeg";
+import shoes from "../pictures/shoes.jpeg";
+import boytoys from "../pictures/boytoy.jpeg";
+import girltoys from "../pictures/girltoys.jpeg";
+import paper from "../pictures/paper.jpeg";
+import pens from "../pictures/pens.jpeg";
+import scissors from "../pictures/scissors.jpeg";
 
 class Dashboard extends Component {
     constructor(props) {

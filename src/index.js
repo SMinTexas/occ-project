@@ -5,7 +5,6 @@ import App from "./App";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-// import { render } from "react-dom";
 import reducer from "./store/reducer";
 import BaseLayout from "./components/BaseLayout";
 import Logon from "./components/Logon";

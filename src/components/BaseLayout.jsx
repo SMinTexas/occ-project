@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./BaseLayout.css";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import OCC from "../occ.jpeg";
+import OCC from "../pictures/occ.jpeg";
 import Status from "./Status";
 
 class Menu extends Component {
