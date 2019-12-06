@@ -110,14 +110,14 @@ class GirlClothingInventory extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        boy_shirts: state.girl_shirts,
-        boy_pants: state.girl_pants,
-        boy_shorts: state.girl_shorts,
-        boy_socks: state.girl_socks,
-        boy_underwear: state.girl_underwear,
-        boy_hats: state.girl_hats,
-        boy_gloves: state.girl_gloves,
-        boy_scarves: state.girl_scarves
+        girl_shirts: state.girl_shirts,
+        girl_pants: state.girl_pants,
+        girl_shorts: state.girl_shorts,
+        girl_socks: state.girl_socks,
+        girl_underwear: state.girl_underwear,
+        girl_hats: state.girl_hats,
+        girl_gloves: state.girl_gloves,
+        girl_scarves: state.girl_scarves
     }
 }
 
