@@ -19,7 +19,7 @@ export default function Logon(props) {
             localStorage.setItem("girlclothing", 126);
             localStorage.setItem("shoes", 47);
             localStorage.setItem("boytoys", 59);
-            localStorage.setItem("girltoys", 23);
+            localStorage.setItem("girltoys", 73);
             localStorage.setItem("paper", 695);
             localStorage.setItem("writing", 2593);
             localStorage.setItem("craft", 1540);

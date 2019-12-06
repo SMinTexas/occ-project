@@ -14,6 +14,12 @@ import Register from "./components/Register";
 import HygieneInventory from "./components/Inv-hygiene";
 import BoyClothingInventory from "./components/Inv-boy-clothes.jsx";
 import GirlClothingInventory from "./components/Inv-girl-clothes";
+import ShoesInventory from "./components/Inv-shoes";
+import BoyToysInventory from "./components/Inv-boy-toys";
+import GirlToysInventory from "./components/Inv-girl-toys";
+import PaperInventory from "./components/Inv-school-paper";
+import WritingInventory from "./components/Inv-school-writing";
+import CraftInventory from "./components/Inv-crafts";
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
@@ -37,6 +43,12 @@ ReactDOM.render(
                     <Route path = "/hygiene" component = {HygieneInventory} />
                     <Route path = "/boyclothes" component = {BoyClothingInventory} />
                     <Route path = "/girlclothes" component = {GirlClothingInventory} />
+                    <Route path = "/shoes" component = {ShoesInventory} />
+                    <Route path = "/boytoys" component = {BoyToysInventory} />
+                    <Route path = "/girltoys" component = {GirlToysInventory} />
+                    <Route path = "/paper" component = {PaperInventory} />
+                    <Route path = "/writing" component = {WritingInventory} />
+                    <Route path = "/craft" component = {CraftInventory} />
                 </Switch>  
             </BaseLayout>  
         </div>  
