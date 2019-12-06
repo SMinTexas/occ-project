@@ -12,6 +12,8 @@ import Logon from "./components/Logon";
 import Dashboard from "./components/Dashboard";
 import Register from "./components/Register";
 import HygieneInventory from "./components/Inv-hygiene";
+import BoyClothingInventory from "./components/Inv-boy-clothes.jsx";
+import GirlClothingInventory from "./components/Inv-girl-clothes";
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
@@ -33,6 +35,8 @@ ReactDOM.render(
                     <Route path = "/dashboard" component = { Dashboard } /> 
                     <Route path = "/register" component = { Register } />
                     <Route path = "/hygiene" component = {HygieneInventory} />
+                    <Route path = "/boyclothes" component = {BoyClothingInventory} />
+                    <Route path = "/girlclothes" component = {GirlClothingInventory} />
                 </Switch>  
             </BaseLayout>  
         </div>  
